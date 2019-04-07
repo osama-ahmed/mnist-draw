@@ -22,14 +22,34 @@
           <canvas id="canvas" width="364" height="364"></canvas>
         </div>
         <div class="col-md-4 col-xs-12">
-            <h2 id="header">MNIST Draw</h2>
-            <p><small>Draw a single digit (0-9) in the box to the left, then click Predict.</small></p>
-            <p><small>A machine learning model trained against the MNIST character dataset will classify the image. Scores for each classification label are plotted below.</small></p>
+            <h2 id="header">MNIST Fashion ML Assighnment 3</h2>
+            <p><small>Draw, then click Predict.</small></p>
+            <p><small>A machine learning model trained against the Fashion MNIST dataset will classify the image. Scores for each classification label are plotted below.</small></p>
+            <p>"T-shirt/top",  # index 0
+                <br>
+                    "Trouser",      # index 1
+                    <br>
+                    "Pullover",     # index 2 
+                    <br>
+                    "Dress",        # index 3 
+                    <br>
+                    "Coat",         # index 4
+                    <br>
+                    "Sandal",       # index 5
+                    <br>
+                    "Shirt",        # index 6 
+                    <br>
+                    "Sneaker",      # index 7 
+                    <br>
+                    "Bag",          # index 8 
+                    <br>
+                    "Ankle boot"   # index 9</p>
             <div class="btn-group" role="group" aria-label="...">
                 <button type="button" class="btn btn-primary" id="predict">Predict <i id="status"></i></button>
                 <button type="button" class="btn btn-default" id="clear-canvas">Clear</button>
             </div>
             <div>
+                <!-- <label id="result"></label> -->
                 <svg id="svg-chart"></svg>
             </div>
         </div>

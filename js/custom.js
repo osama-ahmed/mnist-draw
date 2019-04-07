@@ -1,9 +1,9 @@
 // Canvas setup
 var canvas = new fabric.Canvas('canvas');
 canvas.isDrawingMode = true;
-canvas.freeDrawingBrush.width = 20;
-canvas.freeDrawingBrush.color = "#000000";
-canvas.backgroundColor = "#ffffff";
+canvas.freeDrawingBrush.width = 10;
+//canvas.freeDrawingBrush.color = "#000000";
+//canvas.backgroundColor = "#ffffff";
 canvas.renderAll();
 
 
@@ -12,6 +12,7 @@ $("#clear-canvas").click(function(){
   canvas.clear(); 
   canvas.backgroundColor = "#ffffff";
   canvas.renderAll();
+  $('#result').text('');
   updateChart(zeros);
   $("#status").removeClass();
 });
@@ -30,10 +31,13 @@ $("#predict").click(function(){
   // Post url to python script
   var jq = $.post('cgi-bin/mnist.py', url)
     .done(function (json) {
+      debugger;
       if (json.result) {
         $("#status").removeClass().toggleClass("fa fa-check");
-        $('#svg-chart').show();
+        //$('#result').text(json.data);
         updateChart(json.data);
+        $('#svg-chart').show();
+        
       } else {
          $("#status").removeClass().toggleClass("fa fa-exclamation-triangle");
          console.log('Script Error: ' + json.error)
@@ -50,10 +54,20 @@ $("#predict").click(function(){
 // Iniitialize d3 bar chart
 $('#svg-chart').hide();
 var labels = ['0','1','2','3','4','5','6','7','8','9'];
+// var labels = ["T-shirt/top",  
+// "Trouser",      
+// "Pullover",     
+// "Dress",        
+// "Coat",         
+// "Sandal",       
+// "Shirt",        
+// "Sneaker",      
+// "Bag",          
+// "Ankle boot"];
 var zeros = [0,0,0,0,0,0,0,0,0,0,0];
 
 var margin = {top: 0, right: 0, bottom: 20, left: 0},
-    width = 360 - margin.left - margin.right,
+    width = 600 - margin.left - margin.right,
     height = 180 - margin.top - margin.bottom;
 
 var svg = d3.select("svg")
