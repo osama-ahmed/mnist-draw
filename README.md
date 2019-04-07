@@ -1,6 +1,8 @@
 # mnist-draw
 This repository contains a single page website that enables users to hand-draw and classify clothes using machine learning. A machine learning model trained against the MNIST fashion dataset is used for classification. 
 
+the repository forked from https://github.com/rhammell/mnist-draw which works on mnist digits dataset, I changed the code and the trained model to work with mnist fashion dataset.
+
 # Setup 
 Python 3.5+ is required for compatability with all required modules
 
