@@ -2,6 +2,8 @@
 This repository contains a single page website that enables users to hand-draw and classify clothes using machine learning. A machine learning model trained against the MNIST fashion dataset is used for classification. 
 
 the repository forked from https://github.com/rhammell/mnist-draw which works on mnist digits dataset, I changed the code and the trained model to work with mnist fashion dataset.
+I used this colab link https://colab.research.google.com/github/tensorflow/examples/blob/master/courses/udacity_intro_to_tensorflow_for_deep_learning/l03c01_classifying_images_of_clothing.ipynb?fbclid=IwAR2diCMdq46j6O7w4OI-_DDTevgatE0X3qpJ7Ut7-ww-_GKmj_34GgfDbYY
+to train the model.
 
 # Setup 
 Python 3.5+ is required for compatability with all required modules
