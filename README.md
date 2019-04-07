@@ -1,5 +1,5 @@
 # mnist-draw
-This repository contains a single page website that enables users to hand-draw and classify digits (0-9) using machine learning. A machine learning model trained against the MNIST dataset is used for classification. 
+This repository contains a single page website that enables users to hand-draw and classify clothes using machine learning. A machine learning model trained against the MNIST fashion dataset is used for classification. 
 
 # Setup 
 Python 3.5+ is required for compatability with all required modules
@@ -27,10 +27,6 @@ An example of the website's interface is shown below. Users are guided to draw a
 
 Results are displayed as a bar graph where each classification label recieves a score between 0.0 and 1.0 from the machine learning model. Clear the canvas with the 'Clear' button to draw and process other digits.  
 
-Interface example: 
-<p>
-<img src="http://i.imgur.com/fmIa0e5.gif" width="600">
-</p>
 
 ## Machine Learning Model
 Python scripts related to defining, training, and implementing the machine learning model are contained within the `cgi-bin` folder. 
